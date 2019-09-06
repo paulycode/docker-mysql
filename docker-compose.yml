@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3000:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=pChKhJ7RR9xxzms
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - deploy-mysql
+    restart: always
+    command:
+      - --innodb_flush_log_at_trx_commit=2
+
+volumes:
+  dbdata:
+
+networks:
+  deploy-mysql:

@@ -1,0 +1,4 @@
+!.gitignore
+*local.sh
+*lcoal.yml
+*local.env
